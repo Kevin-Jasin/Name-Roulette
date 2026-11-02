@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #EAE5DA;
+    color: #242322;
+    overflow-x: hidden;
+
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.full-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.full-logo p {
+    font-weight: bold;
+    font-size: large;
+}
+header .nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+header .nav a {
+    text-decoration: none;
+    color: inherit;
+}
+header .nav a.active {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    transform: translatey(5px);
+    font-weight: bold;
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    padding: 0 40px;
+    justify-content: space-between;
+    margin-top: 10%;
+    padding-bottom: 10%;
+}
+.hero .h-left {
+    max-width: 400px;
+}
+h1 {
+    font-size: 5em;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 30px;
+}
+.h1-style {
+    font-size: 5em;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 3em;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.hero .h-left p {
+    font-size: large;
+}
+.cta {
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-size: inherit;
+    background-color: #242322;
+    color: #EAE5DA;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.hero .h-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+}
+.hero .h-buttons a{
+    color: inherit;
+    margin: 0 20px;
+    font-weight: 600;
+}
+.hero .h-right img {
+    width: 480px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background: #CCC8BE;
+}
+.howto {
+    padding: 10% 40px;
+}
+
+.howto-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    background-color: #DCD7CC;
+    padding: 32px;
+    border-radius: 24px;
+    width: 100%;
+}
+
+.howto h3 {
+    margin: 0;
+    letter-spacing: -0.04em;
+}
+.howto h2 {
+    margin-top: 0;
+}
+.howto-container .step span {
+    color: #545350;
+    font-size: smaller;
+    letter-spacing: -0.04em;
+}
+.howto-container .step .count {
+    color: #545350;
+    font-size: smaller;
+    margin-top: 0;
+}
+.howto-container .inner {
+    margin-bottom: 0;
+}
+.info {
+    padding: 10% 40px;
+}
+.info h2 {
+    margin-top: 0;
+}
+.info h3 {
+    margin: 0;
+    letter-spacing: -0.04em;
+}
+.info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+}
+.info .step {
+    background: none;
+    border-top: 2px solid;
+    border-radius: 0;
+    padding: 10px 0;
+}
+.tryout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 32px;
+    background-color: #242322;
+    color: #EAE5DA;
+    padding: 40px;
+    margin-bottom: 10%;
+    padding-bottom: 60px;
+}
+.cta-inv {
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-size: inherit;
+    background-color: #EAE5DA;
+    color: #242322;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    font-size: small;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+footer .links {
+    display: flex;
+    gap: 24px;
+}
+
+/*MOBILE*/
+
+@media (max-width: 999px) {
+    .hero .h-right img {
+        width: 380px;
+
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+    }
+
+    .hero .h-right img {
+        width: 380px;
+        transform: translateX(40%);
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        filter: opacity(0.2) blur(2px);
+    }
+
+    .howto-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .howto-container .step {
+        width: auto;
+    }
+
+    .howto-container > div:nth-child(1) {
+        transform: translate(-10px, 0);
+    }
+
+    .howto-container > div:nth-child(2) {
+        transform: translate(10px, 0);
+    }
+
+    .howto-container > div:nth-child(3) {
+        transform: translate(30px, 0);
+    }
+
+    .info-container {
+        flex-direction: column;
+
+    }
+
+    .full-logo p {
+        display: none;
+    }
+
+    .hero .h-buttons a {
+        margin-right: 0;
+
+    }
+}
