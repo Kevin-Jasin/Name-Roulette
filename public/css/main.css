@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cinzel:wght@400..900&display=swap');
 
 body {
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -212,6 +211,177 @@ footer .links {
     gap: 24px;
 }
 
+/* ABOUT PAGE*/
+.about-hero {
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.about-info {
+    padding: 4% 40px;
+}
+.about-info h2 {
+    margin-top: 0;
+}
+.about-info h3 {
+    margin: 0;
+    letter-spacing: -0.04em;
+}
+.about-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+}
+.about-info .step {
+    background: none;
+    border-top: 2px solid;
+    border-radius: 0;
+    padding: 10px 0;
+}
+.process {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    align-items: start;
+    padding: 4% 40px;
+}
+.process h2 {
+    margin: 0;
+}
+.process-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #CCC8BE;
+}
+.process-list li {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 0;
+    border-top: 1px solid #CCC8BE;
+}
+.process-list .number {
+    font-family: 'Cinzel', serif;
+    font-size: smaller;
+    color: #545350;
+}
+.process-list p {
+    margin: 0;
+}
+.faq {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    align-items: start;
+    padding: 4% 40px;
+}
+.faq h2 {
+    margin: 0;
+}
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.faq-item {
+    background-color: #DCD7CC;
+    border-radius: 24px;
+    padding: 0;
+    overflow: hidden;
+    transition: background-color 0.2s;
+}
+.faq-item[open] {
+background-color: #D3CEC2;
+}
+@media (hover: hover) {
+    .faq-item:hover {
+        background-color: #D3CEC2;
+    }
+}
+.faq-item:hover,
+.faq-item[open] {
+    background-color: #D3CEC2;
+}
+.faq-item summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+    list-style: none;
+    padding: 24px;
+}
+.faq-item summary::after {
+    content: "+";
+}
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+.faq-item[open] summary::after {
+    content: "−";
+}
+.faq-item p {
+    margin: 0;
+    padding: 0 24px 24px;
+    color: #545350;
+    font-size: smaller;
+}
+.team {
+    padding: 4% 40px;
+}
+.team h2 {
+    margin: 0 0 40px;
+    font-size: 2.5em;
+}
+.team-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+.member .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 1.5px solid #242322;
+    background: linear-gradient(90deg, #AFA79C 50%, #939DA0 50%);
+    margin-bottom: 16px;
+}
+.member .avatar.flip {
+    background: linear-gradient(90deg, #939DA0 50%, #AFA79C 50%);
+}
+.member h3 {
+    margin: 0 0 4px;
+    letter-spacing: -0.02em;
+}
+.member p {
+    margin: 0;
+    font-size: smaller;
+    color: #545350;
+}
+.contact {
+    padding: 4% 40px 10%;
+}
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #DCD7CC;
+    border-radius: 32px;
+    padding: 60px 64px;
+}
+.contact-card h2 {
+    font-size: 4em;
+    margin: 0 0 20px;
+}
+.contact-card p {
+    max-width: 500px;
+    margin: 0 0 28px;
+    line-height: 1.5;
+}
+
 /*MOBILE*/
 
 @media (max-width: 999px) {
@@ -268,4 +438,63 @@ footer .links {
         margin-right: 0;
 
     }
-}
+
+        .about-hero h1 {
+        font-size: 3em;
+    }
+    .about-hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-info h2,
+    .process h2,
+    .faq h2 {
+        font-size: 2em;
+    }
+
+    .about-info,
+    .process,
+    .faq,
+    .team,
+    .contact {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .process-list li {
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .team h2 {
+        font-size: 2em;
+    }
+
+    .about-info-container {
+        flex-direction: column;
+    }
+
+    .process {
+        grid-template-columns: 1fr;
+        gap: 24px; 
+    }
+
+    .faq {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .team-list {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .contact-card {
+        padding: 40px 24px;
+    }
+    .contact-card h2 {
+        font-size: 3em;
+    }
+}   
