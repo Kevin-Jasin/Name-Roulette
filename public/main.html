@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Roulette | Keeruta</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <!--header-->
+    <header>
+        <div class="full-logo">
+            <img src="./media/logo.svg" alt="Name Roulette">
+            <p>Name Roulette</p>
+        </div>
+
+        <nav class="nav">
+            <a href="./index.html">Avaleht</a>
+            <a class="active" href="./main.html">Keeruta</a>
+            <a href="./about.html">Meist</a>
+        </nav>
+    </header>
+
+    <div class="line"></div>
+
+    <!--roulette page-->
+    <main class="roulette-page">
+
+        <!--nimede lisamine ja nimekiri-->
+        <section class="roulette-info">
+
+            <h1>Kelle kord on?</h1>
+
+            <p class="roulette-intro">
+                Lisa nimed, vajuta nuppu ja ratas valib ühe.
+            </p>
+
+            <!--Lühike juhend-->
+            <ol class="roulette-instructions">
+                <li>
+                    <span class="instruction-num">1</span>
+                    Kirjuta nimi ja vajuta „Lisa“
+                </li>
+                <li>
+                    <span class="instruction-num">2</span>
+                    Vajuta „Keeruta ratast“
+                </li>
+                <li>
+                    <span class="instruction-num">3</span>
+                    Vaata, kelle peale ratas jääb
+                </li>
+            </ol>
+
+            <!--Siia saab uusi nimesid kirjutada-->
+            <div class="names-editor">
+
+                <label for="name-input">Lisa nimi</label>
+
+                <div class="name-entry">
+                    <input
+                        type="text"
+                        id="name-input"
+                        placeholder="Näiteks: Mari"
+                    >
+
+                    <button type="button" class="add-button">
+                        Lisa
+                    </button>
+                </div>
+
+                <p class="name-hint">
+                    Võid nimesid lisada ka Exceli-tabelist kleepides.
+                </p>
+            </div>
+
+            <!--Nimede arv-->
+            <div class="names-header">
+                <h2>6 nime rattal</h2>
+
+                <div class="names-actions">
+                    <button type="button" class="text-button">
+                        Proovi näidist
+                    </button>
+
+                    <button type="button" class="text-button">
+                        Tühjenda
+                    </button>
+                </div>
+            </div>
+
+            <!--nimede list-->
+            <ol class="names-list">
+
+                <li class="name-item">
+                    <span class="name-index">01</span>
+                    <span class="person-name">Aino</span>
+                    <button type="button" class="remove-name" aria-label="Eemalda Aino">×</button>
+                </li>
+
+                <li class="name-item">
+                    <span class="name-index">02</span>
+                    <span class="person-name">Mart</span>
+                    <button type="button" class="remove-name" aria-label="Eemalda Mart">×</button>
+                </li>
+
+                <li class="name-item">
+                    <span class="name-index">03</span>
+                    <span class="person-name">Liisa</span>
+                    <button type="button" class="remove-name" aria-label="Eemalda Liisa">×</button>
+                </li>
+
+                <li class="name-item">
+                    <span class="name-index">04</span>
+                    <span class="person-name">Jaan</span>
+                    <button type="button" class="remove-name" aria-label="Eemalda Jaan">×</button>
+                </li>
+
+                <li class="name-item">
+                    <span class="name-index">05</span>
+                    <span class="person-name">Kadri</span>
+                    <button type="button" class="remove-name" aria-label="Eemalda Kadri">×</button>
+                </li>
+
+                <li class="name-item">
+                    <span class="name-index">06</span>
+                    <span class="person-name">Tõnu</span>
+                    <button type="button" class="remove-name" aria-label="Eemalda Tõnu">×</button>
+                </li>
+
+            </ol>
+        </section>
+
+        <!--loosiratas-->
+        <section class="roulette-game">
+
+            <div class="wheel-holder">
+
+                <!--Nool näitab valitud nime-->
+                <div class="wheel-pointer"></div>
+
+                <!--Ratas koos nimedega-->
+                <div class="roulette-wheel">
+
+                    <span class="wheel-label label-aino">Aino</span>
+                    <span class="wheel-label label-mart">Mart</span>
+                    <span class="wheel-label label-liisa">Liisa</span>
+                    <span class="wheel-label label-jaan">Jaan</span>
+                    <span class="wheel-label label-kadri">Kadri</span>
+                    <span class="wheel-label label-tonu">Tõnu</span>
+
+                    <div class="wheel-center"></div>
+                </div>
+
+            </div>
+
+            <button type="button" class="cta spin-button">
+                Keeruta ratast
+            </button>
+
+        </section>
+
+    </main>
+
+    <div class="line"></div>
+
+    <!--footer-->
+    <footer>
+        <p class="slogan">
+            Name Roulette · igal nimel on võrdne võimalus
+        </p>
+
+        <div class="links">
+            <a href="./about.html">Meist</a>
+        </div>
+    </footer>
+
+</body>
+</html>

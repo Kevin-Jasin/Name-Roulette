@@ -497,4 +497,440 @@ background-color: #D3CEC2;
     .contact-card h2 {
         font-size: 3em;
     }
-}   
+}
+
+
+/*main.html*/
+
+.roulette-page,
+.roulette-page * {
+    box-sizing: border-box;
+}
+
+.roulette-page button,
+.roulette-page input {
+    font: inherit;
+}
+
+.roulette-page button {
+    cursor: pointer;
+}
+
+.roulette-page {
+    display: grid;
+    grid-template-columns: minmax(0, 410px) minmax(0, 510px);
+    gap: 80px;
+    align-items: start;
+
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto;
+    padding: 115px 40px 125px;
+}
+
+/*vasak pool*/
+
+.roulette-page .roulette-info h1 {
+    font-size: 58px;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    margin: 0 0 16px;
+    white-space: nowrap;
+}
+
+.roulette-intro {
+    font-size: 17px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/*lühike juhend*/
+
+.roulette-instructions {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 0;
+    margin: 28px 0;
+}
+
+.roulette-instructions li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.instruction-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background-color: #DCD7CC;
+    color: #545350;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*nime lisamine*/
+
+.names-editor label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.name-entry {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.name-entry input {
+    flex: 1;
+    min-width: 0;
+    height: 50px;
+
+    padding: 0 15px;
+    border: 2px solid #242322;
+    border-radius: 12px;
+    outline: none;
+
+    background: transparent;
+    color: #242322;
+}
+
+.name-entry input:focus {
+    border-color: #939DA0;
+}
+
+.add-button {
+    padding: 0 23px;
+    border: none;
+    border-radius: 12px;
+
+    background-color: #242322;
+    color: #EAE5DA;
+
+    font-weight: bold;
+}
+
+.name-hint {
+    margin: 8px 0 0;
+    color: #545350;
+    font-size: 12px;
+}
+
+/*Nimekirja pealkiri ja nupud */
+
+.names-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 28px;
+    margin-bottom: 15px;
+}
+
+.roulette-page .names-header h2 {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: normal;
+    font-weight: bold;
+}
+
+.names-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.text-button {
+    padding: 0;
+    border: none;
+    background: none;
+
+    color: #545350;
+    font-size: 13px !important;
+    text-decoration: underline;
+}
+
+/*nimede nimekiri*/
+
+.names-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.name-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    min-height: 48px;
+    padding: 0 16px;
+
+    background-color: #DCD7CC;
+    border-radius: 12px;
+}
+
+.name-index {
+    min-width: 24px;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    color: #545350;
+}
+
+.person-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.remove-name {
+    margin-left: auto;
+    border: none;
+    background: none;
+    color: #242322;
+    font-size: 20px !important;
+}
+
+/*parem pool*/
+
+.roulette-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    min-width: 0;
+}
+
+/*loosiratas*/
+
+.wheel-holder {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.roulette-wheel {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+
+    border: 2px solid #242322;
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: conic-gradient(
+        from 0deg,
+        #242322 0deg 60deg,
+        #939DA0 60deg 120deg,
+        #EAE5DA 120deg 180deg,
+        #AFA79C 180deg 240deg,
+        #242322 240deg 300deg,
+        #939DA0 300deg 360deg
+    );
+}
+
+/*Ratta nool*/
+
+.wheel-pointer {
+    position: absolute;
+    z-index: 2;
+    top: -16px;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+
+    transform: translateX(-50%);
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #242322;
+}
+
+/*nimed ratta peal*/
+
+.wheel-label {
+    position: absolute;
+    font-size: 21px;
+    font-weight: 800;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.label-aino {
+    left: 60%;
+    top: 28%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    color: #EAE5DA;
+}
+
+.label-mart {
+    left: 71%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #242322;
+}
+
+.label-liisa {
+    left: 60%;
+    top: 72%;
+    transform: translate(-50%, -50%) rotate(60deg);
+    color: #242322;
+}
+
+.label-jaan {
+    left: 40%;
+    top: 72%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    color: #242322;
+}
+
+.label-kadri {
+    left: 29%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    color: #EAE5DA;
+}
+
+.label-tonu {
+    left: 40%;
+    top: 28%;
+    transform: translate(-50%, -50%) rotate(60deg);
+    color: #242322;
+}
+
+/*ratta ring*/
+
+.wheel-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 14%;
+    aspect-ratio: 1;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    border: 2px solid #242322;
+    background-color: #EAE5DA;
+}
+
+/*spin nupp*/
+
+.spin-button {
+    min-width: 260px;
+    font-size: 18px;
+}
+
+/*nuppude efektid*/
+
+@media (hover: hover) {
+    .add-button:hover,
+    .spin-button:hover {
+        background-color: #3b3937;
+    }
+
+    .remove-name:hover,
+    .text-button:hover {
+        opacity: 0.6;
+    }
+}
+
+/*Tahvelarvuti vaade*/
+
+@media (max-width: 1100px) {
+
+    .roulette-page {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 40px;
+        padding-top: 80px;
+    }
+
+    .roulette-page .roulette-info h1 {
+        font-size: clamp(36px, 5vw, 58px);
+    }
+
+    .wheel-label {
+        font-size: clamp(15px, 2vw, 21px);
+    }
+}
+
+/*Telefoni vaade*/
+
+@media (max-width: 800px) {
+
+    .roulette-page {
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+
+        padding: 65px 20px 90px;
+        max-width: 520px;
+    }
+
+    .roulette-info,
+    .roulette-game {
+        width: 100%;
+    }
+
+    .roulette-page .roulette-info h1 {
+        font-size: clamp(38px, 9vw, 56px);
+        white-space: normal;
+    }
+
+    .roulette-intro {
+        font-size: 16px;
+    }
+
+    .roulette-game {
+        gap: 35px;
+    }
+
+    .wheel-holder {
+        max-width: 440px;
+    }
+
+    .wheel-label {
+        font-size: clamp(13px, 4vw, 21px);
+    }
+
+    .names-header {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .roulette-page {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .roulette-instructions li {
+        font-size: 13px;
+    }
+
+    .names-actions {
+        gap: 10px;
+    }
+}
+
