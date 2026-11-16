@@ -213,8 +213,7 @@ footer .links {
 
 /* ABOUT PAGE*/
 .about-hero {
-    padding-top: 3%;
-    padding-bottom: 5%;
+    padding: 3% 40px 5%;
 }
 
 .about-info {
