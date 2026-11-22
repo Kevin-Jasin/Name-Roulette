@@ -662,6 +662,7 @@ background-color: #D3CEC2;
     color: #545350;
     font-size: 13px !important;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 /*nimede nimekiri*/
@@ -719,11 +720,18 @@ background-color: #D3CEC2;
 }
 
 /*loosiratas*/
-
 .wheel-holder {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wheel-holder img {
+    height: 30px;
+    margin-bottom: -10px;
+    z-index: 999;
+}
+#wheel-canvas {
+    border-radius: 50%;
 }
 
 .roulette-wheel {
@@ -838,6 +846,35 @@ background-color: #D3CEC2;
 .spin-button {
     min-width: 260px;
     font-size: 18px;
+}
+
+/*kui see läheb err lugema siis õppejõud -rep*/
+dialog:-internal-dialog-in-top-layer::backdrop {
+    backdrop-filter: blur(2px);
+    background-color: #24232240;
+}
+#winner-modal:open {
+    background-color: #EAE5DA;
+    padding: 20px;
+    border-radius: 24px;
+    min-width: 300px;
+    min-height: 200px;
+    border: 1px solid;
+    filter: drop-shadow(1px 2px 3px #24232240);
+    /* border: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #242322;
+}
+#winner-modal p {
+    font-size: 32px;
+    font-weight: bold;
+    margin: auto;
+}
+#winner-modal button {
+
 }
 
 /*nuppude efektid*/

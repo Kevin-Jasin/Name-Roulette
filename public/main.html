@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name Roulette | Keeruta</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -140,24 +140,10 @@
         <section class="roulette-game">
 
             <div class="wheel-holder">
-
-                <!--Nool näitab valitud nime-->
-                <div class="wheel-pointer"></div>
-
-                <!--Ratas koos nimedega-->
-                <div class="roulette-wheel">
-
-                    <span class="wheel-label label-aino">Aino</span>
-                    <span class="wheel-label label-mart">Mart</span>
-                    <span class="wheel-label label-liisa">Liisa</span>
-                    <span class="wheel-label label-jaan">Jaan</span>
-                    <span class="wheel-label label-kadri">Kadri</span>
-                    <span class="wheel-label label-tonu">Tõnu</span>
-
-                    <div class="wheel-center"></div>
-                </div>
-
+                <img src="./media/arrow.svg" alt="">
+                <canvas id="wheel-canvas" width="420" height="420"></canvas>
             </div>
+
 
             <button type="button" class="cta spin-button">
                 Keeruta ratast
@@ -181,5 +167,11 @@
     </footer>
 
     <script src="./js/main.js" defer></script>
+
+<!--    see on popup modali jaoks-->
+    <dialog id="winner-modal">
+        <p id="winner-name"></p>
+        <button type="button" class="text-button" id="close-modal">Sulge</button>
+    </dialog>
 </body>
 </html>
